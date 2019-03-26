@@ -1,11 +1,11 @@
 // model for CurrentItem table
 module.exports = (db, DataTypes) => {
   const CurrentItem = db.define('currentItem', {
-    id: {
-      type: DataTypes.INTEGER,
-      autoIncrement: true,
-      primaryKey: true
-    },
+    // id: {
+    //   type: DataTypes.INTEGER,
+    //   autoIncrement: true,
+    //   primaryKey: true
+    // },
     itemName: {
       type: DataTypes.STRING
       // unique: true
@@ -23,7 +23,9 @@ module.exports = (db, DataTypes) => {
     //   constraints: false,
     //   unique: false
     // })
-    CurrentItem.hasMany(models.ItemBenefits);
+    // CurrentItem.hasMany(models.ItemBenefits,{
+    //   foreignKey: 'itemId',
+    // });
   }
 
   return CurrentItem;

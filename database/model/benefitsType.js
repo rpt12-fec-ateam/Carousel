@@ -13,7 +13,9 @@ module.exports = (db, DataTypes) => {
     //   foreignKey: 'benefitType',
     //   constraints: false
     // })
-    Benefits.hasMany(models.ItemBenefits, {});
+    // Benefits.hasMany(models.ItemBenefits, {
+    //   foreignKey: 'benefitsId',
+    // });
   }
   return Benefits;
 }
