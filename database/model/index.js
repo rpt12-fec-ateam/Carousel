@@ -7,6 +7,7 @@ const sequelize = new Sequelize('dailyharvest', 'root', '', {
 
 const db = {
   // sequelize has 'import' method to import model from the other file
+  ItemBenefits: sequelize.import('./itemBenefits'),
   CurrentItem: sequelize.import('./currentItem'),
   Images: sequelize.import('./images'),
   Benefits: sequelize.import('./benefitsType')
