@@ -20,7 +20,7 @@ Object.keys(db).forEach((modelName)=> {
 // this will sync the database
 // ##note##
 // added force property to delete existing db, and will remove in future
-sequelize.sync({force: true});
+sequelize.sync();
 module.exports = db;
 
 
