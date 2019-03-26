@@ -4,12 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "scripts": {
     "build": "webpack -d --watch",
     "start": "nodemon server.js"
-
   },
   "repository": {
     "type": "git",
@@ -31,7 +27,10 @@
   },
   "dependencies": {
     "express": "^4.16.4",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.5",
     "react": "^16.8.5",
-    "react-dom": "^16.8.5"
+    "react-dom": "^16.8.5",
+    "sequelize": "^5.1.1"
   }
 }
