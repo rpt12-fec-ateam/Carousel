@@ -1,18 +1,8 @@
 'use strict';
-const {mockBenefits} = require('../script/dummyData');
-console.log(mockBenefits());
+const mockBenefits = require('../script/dummyData').mockBenefits;
+// console.log(mockBenefits());
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    /*
-      Add altering commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      return queryInterface.bulkInsert('People', [{
-        name: 'John Doe',
-        isBetaMember: false
-      }], {});
-    */
    let mockData = mockBenefits();
    return queryInterface.bulkInsert('benefits', mockData, {});
 
@@ -20,11 +10,8 @@ module.exports = {
 
   down: (queryInterface, Sequelize) => {
     /*
-      Add reverting commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      return queryInterface.bulkDelete('People', null, {});
+      run 'sequelize db:seed:undo:all' to revert all seeds
     */
+   return queryInterface.bulkDelete('benefits', null, {});
   }
 };
