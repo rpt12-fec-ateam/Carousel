@@ -6,6 +6,10 @@ const s3 = new aws.S3();
 const type = ['Anti-inflammatory', 'Beautifying', 'Cleansing', 'Digestive Support',
               'Energizing','Immunity Boosting', 'Stress Relief', 'Workout Recovery'];
 
+const images = ['https://s3.amazonaws.com/dailyharvest.images/images/image-1ncreased-1Shk_PkNkNw.jpg',
+'https://s3.amazonaws.com/dailyharvest.images/images/image-alexischloe-tDcOX3rOC_M.jpg',
+'https://s3.amazonaws.com/dailyharvest.images/images/image-christine_siracusa-bypcCMcIoVE.jpg'];
+
 // helper function, which return a single benefitType randomily.
 var generateBenefitType = () => {
   let random = Math.floor(Math.random() * 8);
@@ -64,11 +68,12 @@ var mockItemBenefits = () => {
 
 var mockImages = () => {
   let tempArray = [];
+  var imageString = JSON.stringify(images);
   for (var i = 0; i < 100; i++) {
     var count = i + 1;
     tempArray.push({
       id: count,
-      url: 'https://s3.amazonaws.com/dailyharvest.images/images/image-1ncreased-1Shk_PkNkNw.jpg',
+      url: imageString,
       itemId: faker.random.number({
         'min': 1,
         'max': 100

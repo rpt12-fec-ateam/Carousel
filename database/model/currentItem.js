@@ -1,15 +1,7 @@
 // model for CurrentItem table
 module.exports = (db, DataTypes) => {
   const CurrentItem = db.define('currentItem', {
-    // id: {
-    //   type: DataTypes.INTEGER,
-    //   autoIncrement: true,
-    //   primaryKey: true
-    // },
-    itemName: {
-      type: DataTypes.STRING
-      // unique: true
-    }
+    itemName: DataTypes.STRING
   })
   CurrentItem.associate = (models) => {
     // one to many relationship to Images table
