@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.js';
 import NavBar from './component/nav.jsx';
-import Crousel from './component/crousel.jsx';
+import Carousel from './component/carousel.jsx';
 import Benefits from './component/benefits.jsx';
 
 class App extends React.Component {
@@ -17,7 +17,7 @@ class App extends React.Component {
     }
   }
   render() {
-    console.log(window.location);
+    // console.log(window.location);
     return (
       <div>
         <div className="position-relative"><NavBar /></div>
@@ -26,7 +26,7 @@ class App extends React.Component {
           <table>
             <tbody>
               <tr>
-                <td><div className="itemContainer"><Crousel images={this.state.images} /></div></td>
+                <td><div className="itemContainer"><Carousel images={this.state.images} /></div></td>
                 <td><div className="itemDetail">Hellooooooooooooo</div></td>
               </tr>
               <tr>
@@ -42,7 +42,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <App></App>,
-  document.getElementById('root')
-)
+export default App;
