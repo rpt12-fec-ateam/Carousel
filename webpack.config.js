@@ -1,5 +1,5 @@
 const path = require('path');
-const entryDir = path.join(__dirname, './client/app.jsx');
+const entryDir = path.join(__dirname, './client/index.jsx');
 const outputDir = path.join(__dirname, './dist');
 
 console.log(outputDir);
