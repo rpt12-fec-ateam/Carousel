@@ -3,7 +3,7 @@
 module.exports = (db, DataTypes) => {
   const Benefits = db.define('benefits', {
     benefitType: {
-      type: DataTypes.STRING
+      type: DataTypes.TEXT
     }
   })
   Benefits.associate = (models) => {

@@ -11,28 +11,28 @@ const port = 3000;
 app.get('/items', (req, res) => {
   db.CurrentItem.findAll()
   .then((data) => {
-    res.json(data);
+    res.json(data[0]);
   })
 })
 
 app.get('/images', (req, res) => {
   db.Images.findAll()
   .then((data) => {
-    res.json(data);
+    res.json(data[0]);
   })
 })
 
 app.get('/benefits', (req, res) => {
   db.Benefits.findAll()
   .then((data) => {
-    res.json(data);
+    res.json(data[0]);
   })
 })
 
 app.get('/item-benefits', (req, res) => {
   db.ItemBenefits.findAll()
   .then((data) => {
-    res.json(data);
+    res.json(data[0]);
   })
 })
 

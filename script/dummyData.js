@@ -18,11 +18,16 @@ var generateBenefitType = () => {
 // mock data for Benefits Model(table)
 var mockBenefits = function(){
   let tempArray = [];
+  let benefitTypeArray = [];
+  benefitTypeArray.push(generateBenefitType());
+  benefitTypeArray.push(generateBenefitType());
+  benefitTypeArray.push(generateBenefitType());
+
   for (var i = 0; i < 7; i++) {
     var count = i + 1;
     tempArray.push({
       id: count,
-      benefitType: type[i],
+      benefitType: JSON.stringify(benefitTypeArray),
       createdAt: new Date(),
       updatedAt: new Date()
     })
