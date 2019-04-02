@@ -1,9 +1,6 @@
-# About The Author module from goodreads
+# About The Item Carousel module from dailyHarvest
 
->  The module will display author info of the book that is displayed. Specifically, this module will
-    display the author's name, number of followers, and a biography. Also, the top 5 books of that
-    author will display along with a pop-up window with detailed book information that displays
-    if the user hovers over a particular book title.
+>  This module will display at least 3 images, or more according to the specific item of the item detail page, along of the benefits type of each item. The benefits type will be also different in number to each item.
 
 ## Related Projects
 
