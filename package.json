@@ -6,7 +6,9 @@
   "scripts": {
     "build": "webpack -d --watch",
     "start": "nodemon server.js",
-    "test": "jest"
+    "test": "jest",
+    "seed": "sequelize db:seed:all",
+    "unseed": "sequelize db:seed:undo"
   },
   "repository": {
     "type": "git",
