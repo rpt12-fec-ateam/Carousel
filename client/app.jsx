@@ -5,6 +5,30 @@ import '../node_modules/bootstrap/dist/js/bootstrap.js';
 import NavBar from './component/nav.jsx';
 import Carousel from './component/carousel.jsx';
 import Benefits from './component/benefits.jsx';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  border: solid 2px black;
+  padding-left: 5%;
+  padding-right: 5%;npm
+  width: 80%;
+`
+const ItemContainer = styled.div`
+  width: 320px;
+  height: 320px;
+`
+const ItemDetail = styled.div`
+  border: solid 2px blue;
+  margin-left: 10%;
+  margin-right: 10%;
+`
+const Table = styled.table`
+  border: solid 2px blue;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+`
+
 
 class App extends React.Component {
   constructor(props) {
@@ -21,21 +45,33 @@ class App extends React.Component {
     return (
       <div>
         <div className="position-relative"><NavBar /></div>
-        <div className="container">
-          <h6>home / smoothie / ginger+greens</h6>
-          <table>
-            <tbody>
-              <tr>
-                <td><div className="itemContainer"><Carousel images={this.state.images} /></div></td>
-                <td><div className="itemDetail">Hellooooooooooooo</div></td>
-              </tr>
-              <tr>
-                <td>blank</td>
-                <td><Benefits benefits={this.state.benefits} /></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <Container>
+          <div className="container">
+            <h6>home / smoothie / ginger+greens</h6>
+            <Table>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <ItemContainer>
+                        <div className="itemContainer"><Carousel images={this.state.images} /></div>
+                      </ItemContainer>
+                    </td>
+                    <td>
+                      <ItemDetail>
+                        <div className="itemDetail">Hellooooooooooooo</div>
+                      </ItemDetail>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>blank</td>
+                    <td><Benefits benefits={this.state.benefits} /></td>
+                  </tr>
+                </tbody>
+              </table>
+            </Table>
+          </div>
+        </Container>
       </div>
 
     )
