@@ -6,6 +6,7 @@ import NavBar from './component/nav.jsx';
 import Carousel from './component/carousel.jsx';
 import Benefits from './component/benefits.jsx';
 import styled from 'styled-components';
+import Test from './images/beautifying.jsx';
 
 const Container = styled.div`
   border: solid 2px black;
@@ -19,8 +20,7 @@ const ItemContainer = styled.div`
 `
 const ItemDetail = styled.div`
   border: solid 2px blue;
-  margin-left: 10%;
-  margin-right: 10%;
+
 `
 const Table = styled.table`
   border: solid 2px blue;
@@ -30,7 +30,7 @@ const Table = styled.table`
 `
 
 
-class App extends React.Component {
+class ImageCarousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,8 +40,8 @@ class App extends React.Component {
         'https://s3.amazonaws.com/dailyharvest.images/images/image-christine_siracusa-bypcCMcIoVE.jpg']
     }
   }
+
   render() {
-    // console.log(window.location);
     return (
       <div>
         <div className="position-relative"><NavBar /></div>
@@ -49,33 +49,32 @@ class App extends React.Component {
           <div className="container">
             <h6>home / smoothie / ginger+greens</h6>
             <Table>
-              <table>
                 <tbody>
                   <tr>
                     <td>
-                      <ItemContainer>
+                      <ItemContainer style = {{marginLeft: '10%', marginRight: '10%'}}>
                         <div className="itemContainer"><Carousel images={this.state.images} /></div>
                       </ItemContainer>
                     </td>
                     <td>
                       <ItemDetail>
-                        <div className="itemDetail">Hellooooooooooooo</div>
+                        <div id="itemDetail">Put the Description Here</div>
                       </ItemDetail>
                     </td>
                   </tr>
                   <tr>
-                    <td>blank</td>
+                    <td></td>
                     <td><Benefits benefits={this.state.benefits} /></td>
                   </tr>
                 </tbody>
-              </table>
+
             </Table>
           </div>
         </Container>
       </div>
-
     )
   }
 }
 
-export default App;
+export default ImageCarousel;
+window.ImageCarousel = ImageCarousel;
