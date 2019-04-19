@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './app.jsx';
+import ImageCarousel from './app.jsx';
 
 ReactDOM.render(
-  <App></App>,
+  <ImageCarousel></ImageCarousel>,
   document.getElementById('root')
 )
