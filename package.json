@@ -8,7 +8,7 @@
     "start": "nodemon server.js",
     "test": "jest",
     "seed": "sequelize db:seed:all",
-    "unseed": "sequelize db:seed:undo"
+    "unseed": "sequelize db:seed:undo:all"
   },
   "repository": {
     "type": "git",
