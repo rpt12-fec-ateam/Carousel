@@ -32,7 +32,6 @@ const P2 = styled.p`
 
 `
 
-
 const Benefits = (props) => {
   const benefitList = props.benefits.map((item, index) => {
     return (
