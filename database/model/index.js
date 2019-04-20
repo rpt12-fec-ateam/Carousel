@@ -1,11 +1,22 @@
+<<<<<<< HEAD
 var mysql = require('mysql');
 var connection = mysql.createConnection({
   user: 'root',
   password: ''
 });
 
+=======
+const env = require('../../config.js');
+>>>>>>> refactor with env in database, server, and config.js
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('dailyharvest', 'root', '', {
+const mysql = require('mysql');
+
+var connection = mysql.createConnection({
+  user: env.db_username,
+  password: env.db_pwd
+});
+
+const sequelize = new Sequelize(env.db, env.db_username, env.db_pwd, {
   host: 'localhost',
   dialect: 'mysql'
 });
@@ -31,6 +42,17 @@ connection.query('CREATE DATABASE IF NOT EXISTS dailyharvest1', (error, data)=> 
     console.log("Failing at database creation", error);
   } else {
     sequelize.sync();
+  }
+})
+
+
+connection.query('CREATE DATABASE IF NOT EXISTS dailyharvest', (error, data)=> {
+  if (error) {
+    console.log("Failing at database creation", error);
+  } else {
+    if (data.warningCount == 0) {
+      sequelize.sync();
+    }
   }
 })
 
