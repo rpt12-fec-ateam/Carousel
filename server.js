@@ -2,12 +2,12 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const db = require('./database/model/index');
+const port = require('./config.js').port;
+// var config = require('./config/config.js/index.js');
 
-
+// console.log(config);
 console.log('this is database ', db);
 app.use('/', express.static(path.join(__dirname, './dist')));
-
-const port = 3000;
 
 app.get('/items', (req, res) => {
   db.CurrentItem.findAll()
@@ -37,6 +37,10 @@ app.get('/item-benefits', (req, res) => {
   })
 })
 
-app.listen(port, () => {
-  console.log('listening from port', port);
+app.listen(port, (err, data) => {
+  if (err) {
+    console.log("error in connecting port", err);
+  } else {
+    console.log('listening from port', port);
+  }
 })
