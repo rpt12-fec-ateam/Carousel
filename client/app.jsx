@@ -67,7 +67,6 @@ class ImageCarousel extends React.Component {
                     <td><Benefits benefits={this.state.benefits} /></td>
                   </tr>
                 </tbody>
-
             </Table>
           </div>
         </Container>

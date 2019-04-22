@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-var mysql = require('mysql');
-var connection = mysql.createConnection({
-  user: 'root',
-  password: ''
-});
-
-=======
 const env = require('../../config.js');
->>>>>>> refactor with env in database, server, and config.js
 const Sequelize = require('sequelize');
 const mysql = require('mysql');
 
@@ -37,16 +28,8 @@ Object.keys(db).forEach((modelName)=> {
 // this will sync the database
 // ##note##
 // added force property to delete existing db, and will remove in future
-connection.query('CREATE DATABASE IF NOT EXISTS dailyharvest1', (error, data)=> {
-  if (error) {
-    console.log("Failing at database creation", error);
-  } else {
-    sequelize.sync();
-  }
-})
 
-
-connection.query('CREATE DATABASE IF NOT EXISTS dailyharvest', (error, data)=> {
+connection.query('CREATE DATABASE IF NOT EXISTS ' + env.db, (error, data)=> {
   if (error) {
     console.log("Failing at database creation", error);
   } else {
