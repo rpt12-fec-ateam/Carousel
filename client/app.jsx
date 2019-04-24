@@ -6,10 +6,10 @@ import NavBar from './component/nav.jsx';
 import Carousel from './component/carousel.jsx';
 import Benefits from './component/benefits.jsx';
 import styled from 'styled-components';
-import Test from './images/beautifying.jsx';
+
 
 const Container = styled.div`
-  border: solid 2px black;
+
   padding-left: 5%;
   padding-right: 5%;npm
   width: 80%;
@@ -19,11 +19,10 @@ const ItemContainer = styled.div`
   height: 320px;
 `
 const ItemDetail = styled.div`
-  border: solid 2px blue;
 
 `
 const Table = styled.table`
-  border: solid 2px blue;
+
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
@@ -41,7 +40,18 @@ class ImageCarousel extends React.Component {
     }
   }
 
+  getImage() {
+    fetch('/images')
+    .then(data => data.json())
+    .then(items => console.log("data form database", items));
+  }
+
+  componentDidMount() {
+    this.getImage()
+
+  }
   render() {
+    this.getImage();
     return (
       <div>
         <div className="position-relative"><NavBar /></div>
@@ -58,7 +68,7 @@ class ImageCarousel extends React.Component {
                     </td>
                     <td>
                       <ItemDetail>
-                        <div id="itemDetail">Put the Description Here</div>
+                        <div id="itemDetail"></div>
                       </ItemDetail>
                     </td>
                   </tr>
