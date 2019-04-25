@@ -39,17 +39,6 @@ class ImageCarousel extends React.Component {
         'https://s3.amazonaws.com/dailyharvest.images/images/image-christine_siracusa-bypcCMcIoVE.jpg']
     }
   }
-
-  getImage() {
-    fetch('/images')
-    .then(data => data.json())
-    .then(items => console.log("data form database", items));
-  }
-
-  componentDidMount() {
-    this.getImage()
-
-  }
   render() {
     return (
       <div>
