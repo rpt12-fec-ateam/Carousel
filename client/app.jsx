@@ -51,7 +51,6 @@ class ImageCarousel extends React.Component {
 
   }
   render() {
-    this.getImage();
     return (
       <div>
         <div className="position-relative"><NavBar /></div>
