@@ -56,7 +56,7 @@ class ImageCarousel extends React.Component {
                     </td>
                     <td>
                       <ItemDetail>
-                        <div id="itemDetail"></div>
+                        <div id="app"></div>
                       </ItemDetail>
                     </td>
                   </tr>
