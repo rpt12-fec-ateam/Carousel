@@ -1,6 +1,6 @@
-# About The Item Carousel module from dailyHarvest
+# About 
 
->  This module will display at least 3 images, or more according to the specific item of the item detail page, along of the benefits type of each item. The benefits type will be also different in number to each item.
+>  This is the mircorservice resonsible for Carousel image from dailyHarvest. It will display at least 3 images, or more according to the specific item of the item detail page, along of the benefits type of each item. The benefits type will be also different in number to each item.
 
 ## Related Projects
 
