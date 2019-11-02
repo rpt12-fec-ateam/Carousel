@@ -48,7 +48,7 @@
     "popper.js": "^1.14.7",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
-    "sequelize": "^5.1.1",
+    "sequelize": "^5.15.1",
     "style-loader": "^0.23.1",
     "styled-components": "^4.2.0"
   }
